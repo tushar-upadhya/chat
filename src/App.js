@@ -27,6 +27,7 @@ import {
 } from "firebase/firestore";
 
 const auth = getAuth(app);
+
 const database = getFirestore(app);
 
 const loginHandler = () => {
@@ -38,7 +39,9 @@ const logoutHandler = () => signOut(auth);
 
 function App() {
     const [user, setUser] = useState(false);
+
     const [message, setMessage] = useState("");
+
     const [messages, setMessages] = useState([]);
 
     const divForScroll = useRef(null);
